@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #252424;
+  color: #fff;
+}
+:root {
+  --c1:#d4d4d4;
+  --c2:#BFBFBF;
+  --c3:#9B9D9C;
+  --c4:#292727;
+  --c5:#d60000;
+  --c6:rgb(72, 0, 0);
+}
+
+
+.nav {
+  background: rgba(23, 23, 23, 0.6);
+  backdrop-filter: blur(6px);
+  padding: 0.5rem 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.menu {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  padding: 0.55rem 0.8rem;
+  border-radius: 12px;
+  color: #fff;
+  opacity: 0.9;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.menu a:hover {
+  color:var(--c5) ;
+  background: none;
+  opacity: 1;
+}
+
+
+header {
+  margin-top: 60px; 
+}
+
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background: #333;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card h3 {
+  margin: 15px 15px 3px 15px;
+  font-size: 1.2rem;
+  
+}
+
+.card .descricao {
+  margin: 0 15px;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.card .description {
+  display: flex;          
+  flex-direction: column; 
+  align-items: center;    
+  padding: 0 15px;
+  font-size: 0.95rem;
+}
+
+img{
+  position: relative;
+  height: 280px;
+  width: 280px;
+  border-radius: 20px;
+}

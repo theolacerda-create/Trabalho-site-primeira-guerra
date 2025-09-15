@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #252424;
+  color: #fff;
+  overflow-x: hidden; 
+  overflow-y: hidden;
+}
+
+.nav {
+  background: rgba(23,23,23,0.6);
+  backdrop-filter: blur(6px);
+  padding: 1.2rem 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.nav a:hover {
+  color: #d60000;
+}
+
+.carousel {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  margin-top: 80px; 
+  height: 100vh; 
+  width: 100vw; 
+  overflow: visible; 
+}
+
+.carousel-track {
+  display: flex;
+  gap: 60px;
+  transition: transform 0.5s ease-in-out;
+  width: max-content; 
+}
+
+.arma {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+model-viewer {
+  width: 400px;
+  height: 400px;
+  margin-bottom: 10px; 
+  cursor: grab;
+}
+
+.arma-info {
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.arma-info h2 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.arma-info p {
+  margin: 0;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.arma.active model-viewer {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
