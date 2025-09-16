@@ -68,6 +68,24 @@ header {
   .cards-container {
     grid-template-columns: 1fr;
   }
+   .menu {
+    display: none;
+    flex-direction: column;
+    background: rgba(23,23,23,0.95);
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }
 
 .card {
