@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "EB Garamond", serif;
   background: #252424;
   color: #fff;
 }
@@ -83,8 +85,9 @@ header {
 }
 
 .card h3 {
-  margin: 15px 15px 3px 15px;
+  margin: 15px 15px 0px 15px;
   font-size: 1.2rem;
+  
   
 }
 
@@ -107,4 +110,5 @@ img{
   height: 280px;
   width: 280px;
   border-radius: 20px;
+  
 }
