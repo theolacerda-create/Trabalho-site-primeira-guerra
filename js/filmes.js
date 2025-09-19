@@ -1,10 +1,28 @@
 const carousels = document.querySelectorAll('.carousel');
 let autoScroll = true;
+const speed = 0.6; 
+const interval = 25; 
 
 carousels.forEach(carousel => {
+  
+  const cards = Array.from(carousel.children);
+  cards.forEach(card => {
+    const clone = card.cloneNode(true);
+    carousel.appendChild(clone);
+  });
+
+  
   setInterval(() => {
-    if (autoScroll) carousel.scrollLeft += 1;
-  }, 30);
+    if (autoScroll) {
+      carousel.scrollLeft += speed;
+
+      
+      if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
+        carousel.scrollLeft = 0;
+      }
+    }
+  }, interval);
+
 
   carousel.addEventListener('wheel', (e) => {
     e.preventDefault();
@@ -12,9 +30,11 @@ carousels.forEach(carousel => {
   });
 });
 
+
 document.querySelectorAll('.card').forEach(card => {
   card.addEventListener('click', () => {
-    autoScroll = false;
     card.classList.toggle('flipped');
+    autoScroll = !card.classList.contains('flipped');
   });
-}); 
+});
+
