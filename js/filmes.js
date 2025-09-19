@@ -1,6 +1,6 @@
 const carousels = document.querySelectorAll('.carousel');
 let autoScroll = true;
-const speed = 0.6; 
+const speed = 0.5; 
 const interval = 25; 
 
 carousels.forEach(carousel => {
