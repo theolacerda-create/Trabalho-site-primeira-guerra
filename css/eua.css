@@ -1,26 +1,25 @@
 :root {
-  --c1:#d4d4d4;
-  --c2:#BFBFBF;
-  --c3:#9B9D9C;
-  --c4:#292727;
-  --c5:#d60000;
-  --c6:rgb(72, 0, 0);
+  --c1: #ffffff;   /* Branco */
+  --c2: #d60000;   /* Vermelho forte */
+  --c3: #001f5b;   /* Azul escuro patriota */
+  --c4: #292727;   /* Cinza escuro de fundo */
 }
 
 body {
   margin: 0;
   font-family: "Quintessential", serif;
   background: var(--c4);
-  color: #fff;
+  color: var(--c1);
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 70px;
+  padding-top: 40px;
 }
 
+/* Navbar fixa */
 .nav {
-  background: rgba(23, 23, 23, 0.6);
+  background: rgba(23, 23, 23, 0.8);
   backdrop-filter: blur(6px);
   padding: 0.5rem 1rem;
   position: fixed;
@@ -40,16 +39,115 @@ body {
   padding: 0.55rem 0.8rem;
   border-radius: 12px;
   font-family: sans-serif;
-  color: #fff;
+  color: var(--c1);
   opacity: 0.9;
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .menu a:hover {
-  color: var(--c5);
-  background: none;
+  color: var(--c2);
   opacity: 1;
 }
 
+/* Hero section com bandeira e overlay */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  background: url("../media/bandeira.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+/* Conteúdo do Hero */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+.tio-sam {
+  max-width: 300px;
+  filter: drop-shadow(0px 0px 20px black);
+}
+
+.text-box {
+  max-width: 500px;
+  color: var(--c1);
+}
+
+/* Título azul com estrelas */
+.text-box h1 {
+  font-size: 2.5rem;
+  color: var(--c3);
+  text-shadow: 
+    2px 2px 4px rgba(0,0,0,0.379),
+    0 0 5px white; /* efeito brilhante para destacar */
+  margin-bottom: 10px;
+  position: relative;
+}
+
+/* Adicionando estrelas pequenas no título */
+.text-box h1::before {
+  content: "★ ★ ★ ★ ★";
+  color: var(--c1);
+  font-size: 1.2rem;
+  position: absolute;
+  top: -25px;
+  left: 0;
+  letter-spacing: 5px;
+}
+
+/* Parágrafo com sombra */
+.text-box p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--c1);
+  text-shadow: 1px 1px 6px black;
+}
+
+/* Slogan vermelho com contorno branco */
+.slogan {
+  font-size: 2.5rem;
+  color: var(--c2);
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 
+    -2px -2px 0 var(--c1),  
+     2px -2px 0 var(--c1),
+    -2px  2px 0 var(--c1),
+     2px  2px 0 var(--c1),
+     4px  4px 8px black;
+  letter-spacing: 2px;
+}
+
+/* Conteúdo geral da página */
+.content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+section {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+
+section h2 {
+  color: var(--c2);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
