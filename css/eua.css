@@ -1,8 +1,8 @@
 :root {
-  --c1: #ffffff;   /* Branco */
-  --c2: #d60000;   /* Vermelho forte */
-  --c3: #001f5b;   /* Azul escuro patriota */
-  --c4: #292727;   /* Cinza escuro de fundo */
+  --c1: #ffffff;   
+  --c2: #d60000;  
+  --c3: #001f5b;  
+  --c4: #292727;   
 }
 
 body {
@@ -17,7 +17,7 @@ body {
   padding-top: 40px;
 }
 
-/* Navbar fixa */
+
 .nav {
   background: rgba(23, 23, 23, 0.8);
   backdrop-filter: blur(6px);
@@ -50,7 +50,7 @@ body {
   opacity: 1;
 }
 
-/* Hero section com bandeira e overlay */
+
 .hero {
   position: relative;
   width: 100%;
@@ -67,7 +67,7 @@ body {
   background: rgba(0,0,0,0.5);
 }
 
-/* Conteúdo do Hero */
+
 .hero-content {
   position: relative;
   z-index: 2;
@@ -87,18 +87,18 @@ body {
   color: var(--c1);
 }
 
-/* Título azul com estrelas */
+
 .text-box h1 {
   font-size: 2.5rem;
   color: var(--c3);
   text-shadow: 
     2px 2px 4px rgba(0,0,0,0.379),
-    0 0 5px white; /* efeito brilhante para destacar */
+    0 0 5px white; 
   margin-bottom: 10px;
   position: relative;
 }
 
-/* Adicionando estrelas pequenas no título */
+
 .text-box h1::before {
   content: "★ ★ ★ ★ ★";
   color: var(--c1);
@@ -109,7 +109,7 @@ body {
   letter-spacing: 5px;
 }
 
-/* Parágrafo com sombra */
+
 .text-box p {
   font-size: 1.2rem;
   margin-bottom: 15px;
@@ -117,7 +117,7 @@ body {
   text-shadow: 1px 1px 6px black;
 }
 
-/* Slogan vermelho com contorno branco */
+
 .slogan {
   font-size: 2.5rem;
   color: var(--c2);
@@ -132,7 +132,7 @@ body {
   letter-spacing: 2px;
 }
 
-/* Conteúdo geral da página */
+
 .content {
   max-width: 900px;
   margin: 40px auto;
