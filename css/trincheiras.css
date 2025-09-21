@@ -1,0 +1,159 @@
+:root {
+  --c1: #3e3e3e; 
+  --c2: #6b4f3f; 
+  --c3: #d4d4d4;
+  --c4: #1e1e1e; 
+  --cd: #d60000;
+}
+
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: var(--c4);
+  color: var(--c3);
+  line-height: 1.6;
+}
+
+.menu a {
+  font-family: sans-serif;
+}
+
+.nav {
+  background: rgba(23,23,23,0.6);
+  backdrop-filter: blur(6px);
+  padding: 1.2rem 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.nav a:hover {
+  color: var(--cd);
+}
+
+header {
+  position: relative;
+  height: 100vh; 
+  background: url("../media/1917tri.webp") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Garamond', 'Georgia', serif;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.75);
+  z-index: 1;
+}
+
+header .header-content {
+  position: relative;
+  z-index: 2;
+}
+
+header h1 {
+  font-family: "Merriweather";
+  font-size: 4rem;
+  font-weight: 900; 
+  color: #f3f2f2;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  /* text-shadow removido */
+  animation: fadeInTitle 1.5s ease forwards;
+}
+
+@keyframes fadeInTitle {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 2rem;
+  border-left: 5px solid var(--c2);
+  padding-left: 10px;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.introducao {
+  background-color: rgba(41, 39, 39, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  margin-top: 2rem;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.introducao p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  color: var(--c3);
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.introducao p:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.destaque {
+  color: var(--cd);
+  font-weight: bold;
+}
+
+.imagem-destaque img {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: 1rem auto 2rem auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.curiosidade blockquote {
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-left: 5px solid var(--c2);
+  border-radius: 5px;
+}
