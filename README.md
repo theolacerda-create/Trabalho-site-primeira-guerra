@@ -1,4 +1,4 @@
-Site da Primeira Guerra Mundial
+Site da Primeira Guerra Mundial:                                          
 Este projeto foi desenvolvido como parte de um trabalho da disciplina de História, em conjunto com o Curso Técnico em Desenvolvimento de Sistemas.
 O objetivo principal consiste em integrar o aprendizado histórico à prática de desenvolvimento web, por meio da construção de um site educativo e informativo sobre a Primeira Guerra Mundial.
 
