@@ -11,30 +11,14 @@ const questions = [
     correct: 1,
     hint: "Aconteceu em Sarajevo e envolveu a realeza austro-húngara."
   },
-  {
-    question: "Qual país declarou guerra primeiro após o assassinato do arquiduque?",
-    options: ["Alemanha", "Rússia", "Áustria-Hungria", "França"],
-    correct: 2,
-    hint: "Este país tinha ligação direta com a vítima."
-  },
-  {
-    question: "Qual foi a estratégia inicial da Alemanha para atacar a França?",
-    options: ["Plano Schlieffen", "Guerra de trincheiras", "Blitzkrieg", "Operação Barbarossa"],
-    correct: 0,
-    hint: "O plano envolvia atacar pela Bélgica para cercar a França."
-  },
+ 
   {
     question: "Qual foi a primeira grande batalha na França em 1914?",
     options: ["Marne", "Somme", "Verdun", "Gallipoli"],
     correct: 0,
     hint: "Impediu o avanço rápido alemão para Paris."
   },
-  {
-    question: "Qual país invadiu a Bélgica no início da guerra?",
-    options: ["Alemanha", "França", "Rússia", "Áustria-Hungria"],
-    correct: 0,
-    hint: "Foi parte do Plano Schlieffen."
-  },
+ 
   {
     question: "Qual foi a principal característica da guerra de trincheiras?",
     options: [
@@ -52,12 +36,7 @@ const questions = [
     correct: 0,
     hint: "Durou praticamente o ano inteiro na França."
   },
-  {
-    question: "Qual país participou da campanha de Gallipoli?",
-    options: ["Austrália e Nova Zelândia", "França e Alemanha", "Rússia e Itália", "Inglaterra e EUA"],
-    correct: 0,
-    hint: "O Corpo da ANZAC foi famoso nesta campanha."
-  },
+ 
   {
     question: "Quem era o líder da Alemanha durante a Primeira Guerra Mundial?",
     options: ["Kaiser Guilherme II", "Otto von Bismarck", "Adolf Hitler", "Friedrich Ebert"],
@@ -70,144 +49,49 @@ const questions = [
     correct: 0,
     hint: "Principalmente usados pela Alemanha."
   },
-  {
-    question: "Qual foi o impacto da guerra na sociedade civil?",
-    options: ["Racionamento e escassez", "Crescimento populacional", "Migração em massa", "Desenvolvimento tecnológico sem impactos"],
-    correct: 0,
-    hint: "Alimentos e suprimentos ficaram escassos."
-  },
-  {
-    question: "Qual foi a revolta interna que afetou o Império Austro-Húngaro?",
-    options: ["Revoltas de nacionalidades", "Revolução Francesa", "Guerra Civil Alemã", "Insurreição Italiana"],
-    correct: 0,
-    hint: "Diversos povos queriam independência."
-  },
+  
   {
     question: "Em que ano os Estados Unidos entraram na guerra?",
     options: ["1914", "1915", "1916", "1917"],
     correct: 3,
     hint: "Foi no mesmo ano da Revolução Russa."
   },
-  {
-    question: "Qual foi o uso controverso na guerra que matou milhares de soldados?",
-    options: ["Gás mostarda", "Bombas atômicas", "Cavalaria pesada", "Tanques"],
-    correct: 0,
-    hint: "Um tipo de arma química."
-  },
-  {
-    question: "Qual país teve grande avanço com tanques em batalha de 1917?",
-    options: ["Inglaterra", "Alemanha", "França", "Rússia"],
-    correct: 0,
-    hint: "O Mark IV foi usado nesta batalha."
-  },
+ 
   {
     question: "Qual batalha ficou famosa pelo uso de gás mostarda?",
     options: ["Ypres", "Marne", "Somme", "Verdun"],
     correct: 0,
     hint: "Na Bélgica, em 1915."
   },
-  {
-    question: "Qual foi a primeira revolução na Rússia em 1917?",
-    options: ["Fevereiro de 1917", "Outubro de 1917", "Março de 1918", "Novembro de 1918"],
-    correct: 0,
-    hint: "Primeira revolução do ano de 1917."
-  },
-  {
-    question: "Qual foi a segunda revolução na Rússia em 1917?",
-    options: ["Outubro de 1917", "Fevereiro de 1917", "Março de 1918", "Novembro de 1918"],
-    correct: 0,
-    hint: "Levou os bolcheviques ao poder."
-  },
-  
+ 
   {
     question: "Qual país saiu da guerra após a Revolução de 1917?",
     options: ["Alemanha", "Rússia", "França", "Itália"],
     correct: 1,
     hint: "A revolução levou ao governo comunista."
   },
-  {
-    question: "Quando ocorreu o armistício que encerrou os combates?",
-    options: ["11 de novembro de 1918", "28 de junho de 1919", "1 de janeiro de 1919", "3 de março de 1918"],
-    correct: 0,
-    hint: "Assinado no 11º dia do 11º mês às 11 horas."
-  },
+  
   {
     question: "Qual tratado encerrou a guerra com a Alemanha?",
-    options: ["Tratado de Versalhes", "Saint-Germain", "Trianon", "Sèvres"],
+    options: ["Tratado de Versalhes", "Saint-Germain", "Tratado de Trianon", "Sèvres"],
     correct: 0,
     hint: "Assinado na França, impôs duras condições à Alemanha."
   },
-  {
-    question: "Qual país sofreu divisão de território após o Tratado de Saint-Germain?",
-    options: ["Áustria", "Alemanha", "Itália", "França"],
-    correct: 0,
-    hint: "Perdeu várias regiões para novos países."
-  },
+ 
   {
     question: "Qual foi a consequência política imediata para a Alemanha?",
     options: ["Abdicação do Kaiser", "Ascensão do Hitler", "Revolução Bolchevique", "Unificação com Áustria"],
     correct: 0,
     hint: "Fim da monarquia alemã."
   },
-  {
-    question: "Qual império foi desmembrado após a guerra?",
-    options: ["Império Otomano", "Império Britânico", "Império Russo", "Império Japonês"],
-    correct: 0,
-    hint: "Ficou na região do Oriente Médio."
-  },
+  
   {
     question: "Qual foi a principal organização internacional criada após a guerra?",
     options: ["Liga das Nações", "ONU", "OTAN", "CIS"],
     correct: 0,
     hint: "Tinha como objetivo evitar futuros conflitos."
   },
-  {
-    question: "Qual foi o impacto das reparações impostas à Alemanha?",
-    options: ["Crise econômica e hiperinflação", "Prosperidade econômica", "Avanço industrial", "Expansão territorial"],
-    correct: 0,
-    hint: "Principalmente na década de 1920."
-  },
-  {
-    question: "Qual país emergiu enfraquecido, mas não totalmente derrotado, após a guerra?",
-    options: ["França", "Alemanha", "Rússia", "Itália"],
-    correct: 0,
-    hint: "Recuperou-se parcialmente com ajuda externa."
-  },
-  {
-    question: "O que foi o Mandato da Liga das Nações?",
-    options: [
-      "Territórios controlados por países vencedores",
-      "Tratado de paz entre Alemanha e França",
-      "Programa de reconstrução da Rússia",
-      "Conferência econômica internacional"
-    ],
-    correct: 0,
-    hint: "Principalmente sobre ex-colônias do Império Otomano e Alemanha."
-  },
-  {
-    question: "Qual foi a batalha que marcou o fracasso do avanço alemão na França?",
-    options: ["Marne", "Somme", "Verdun", "Gallipoli"],
-    correct: 0,
-    hint: "Aconteceu no início da guerra em território francês."
-  },
-  {
-    question: "Qual país foi pioneiro no uso de tanques na guerra?",
-    options: ["Inglaterra", "Alemanha", "França", "Rússia"],
-    correct: 0,
-    hint: "Primeiros tanques Mark I entraram em combate em 1916."
-  },
-  {
-    question: "Qual foi a consequência econômica mais grave para a Alemanha após a guerra?",
-    options: ["Hiperinflação", "Boom econômico", "Industrialização rápida", "Autossuficiência agrícola"],
-    correct: 0,
-    hint: "Iniciou nos anos 1920 devido às reparações de guerra."
-  },
-  {
-    question: "Qual revolta interna afetou o Império Austro-Húngaro?",
-    options: ["Revoltas de nacionalidades", "Revolução Francesa", "Guerra Civil Alemã", "Insurreição Italiana"],
-    correct: 0,
-    hint: "Diversos povos queriam independência."
-  }
+  
 ];
 
 
