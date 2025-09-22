@@ -3,11 +3,11 @@ Este projeto foi desenvolvido como parte de um trabalho da disciplina de Histór
 O objetivo principal consiste em integrar o aprendizado histórico à prática de desenvolvimento web, por meio da construção de um site educativo e informativo sobre a Primeira Guerra Mundial.
 
 
-Conteúdo do Site
+Conteúdo do Site:
 
 O site é estruturado em páginas independentes, cada uma  dividida entre a linha do tempo, para eventos cronológicos e menu, para informações mais gerais. 
 
-Tecnologias Utilizadas
+Tecnologias Utilizadas:
 
 HTML5 – Estruturação das páginas e conteúdo.
 
@@ -19,7 +19,7 @@ PHP- Banco de dados utilizado para o quiz.
 
 
 
-Estrutura do Projeto
+Estrutura do Projeto:
 
 TRABALHO-SITE-PRIMEIRA-GUERRA
 │
@@ -31,7 +31,7 @@ TRABALHO-SITE-PRIMEIRA-GUERRA
 
 
 
-Objetivos do Projeto
+Objetivos do Projeto:
 
 Promover a compreensão da Primeira Guerra Mundial por meio de uma ferramenta digital interativa.
 
@@ -42,7 +42,7 @@ Desenvolver habilidades em HTML, CSS e JavaScript aplicadas a um contexto educac
 
 
 
-Como Executar
+Como Executar:
 
 1. Baixe ou clone o repositório.
 
@@ -55,6 +55,6 @@ Como Executar
 
 4. Explore os conteúdos disponibilizados.
 
-Autoria
+Autoria:
 
 Projeto desenvolvido por Théo Lacerda, como parte do curso técnico em Desenvolvimento de Sistemas, associado a um trabalho da disciplina de História.
