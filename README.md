@@ -15,7 +15,6 @@ CSS3 – Estilização, design e organização visual.
 
 JavaScript – Recursos de interatividade e dinamicidade.
 
-PHP- Banco de dados utilizado para o quiz.
 
 
 
