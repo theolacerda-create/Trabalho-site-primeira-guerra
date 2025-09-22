@@ -19,15 +19,6 @@ PHP- Banco de dados utilizado para o quiz.
 
 
 
-Estrutura do Projeto:
-
-TRABALHO-SITE-PRIMEIRA-GUERRA         
- css/→ Arquivos de estilo (CSS)
- html/ → Páginas principais (HTML)
- js/ → Scripts e funcionalidades (JavaScript)
- github/ → Repositório e versionamento do projeto
-
-
 
 
 Objetivos do Projeto:
