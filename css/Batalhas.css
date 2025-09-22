@@ -47,8 +47,9 @@ body {
 header {
   margin-top: 20px;
   position: relative;
-  height: 100vh; 
-  background: url("../media/frança.jpg ") center/cover no-repeat;
+  height: 100vh;
+  background: url("../media/frança.jpg") center center no-repeat;
+  background-size: 100% auto; 
   display: flex;
   align-items: center;
   justify-content: center;
