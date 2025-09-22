@@ -1,23 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Primeira Guerra</title>
-  <link rel="stylesheet" href="../css/quiz.css">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Primeira Guerra Mundial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/quiz.css">
 </head>
 <body>
     <nav class="nav">
     <div class="container">
-      
       <div class="menu" id="menu">
-        <a href="../index.html">Inicio</a>
-        <a href="../html/Consequencias.html">Consequencias</a>
+        <a href="../index.html">Início</a>
+        <a href="../html/Consequencias.html">Consequências</a>
         <a href="../html/Figuras.html">Figuras importantes</a>
         <a href="../html/Filmes.html">Filmes/Livros</a>
         <a href="../html/quiz.html">Quiz</a>
       </div>
     </div>
   </nav>
+
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h1 class="quiz-title">Quiz da Primeira Guerra Mundial</h1>
+            <div class="quiz-progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <p class="progress-text">Pergunta <span id="currentQuestion">1</span> de <span id="totalQuestions">12</span></p>
+        </div>
+
+        <div class="question-container">
+            <div class="question-header">
+                <div class="question-number" id="questionNumber">1</div>
+                <button class="hint-button" onclick="showHint()">💡</button>
+            </div>
+            <h2 class="question-text" id="questionText"></h2>
+            <div class="answers-grid" id="answersGrid"></div>
+        </div>
+
+        <div class="control-buttons">
+            <button class="btn btn-secondary" onclick="changeAnswer()" id="changeBtn" style="display:none;">Alterar Resposta</button>
+            <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn" style="display:none;">Próxima</button>
+            <button class="btn btn-primary" onclick="finishQuiz()" id="finishBtn" style="display:none;">Finalizar Quiz</button>
+        </div>
+
+        <div class="result-container" id="resultContainer">
+            <div class="result-icon">🎉</div>
+            <h2>Quiz Concluído!</h2>
+            <div class="score" id="finalScore">0/12</div>
+            <p class="result-message">Parabéns por completar o quiz sobre a Primeira Guerra Mundial!</p>
+            <button class="btn btn-primary" onclick="restartQuiz()">Refazer Quiz</button>
+        </div>
+    </div>
+
+    <div class="hint-modal" id="hintModal">
+        <div class="hint-content">
+            <button class="hint-close" onclick="hideHint()">&times;</button>
+            <h3>💡 Dica</h3>
+            <p id="hintText"></p>
+        </div>
+    </div>
+
+    <script src="../js/quiz.js"></script>
 </body>
+</html>

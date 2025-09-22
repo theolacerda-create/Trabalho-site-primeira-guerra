@@ -1,6 +1,6 @@
 :root {
   --c1: #3e3e3e; 
-  --c2: #595959;
+  --c2: #2626b8;
   --c3: #d4d4d4;
   --c4: #1e1e1e; 
   --cd: #d60000;
@@ -45,9 +45,10 @@ body {
 }
 
 header {
+  margin-top: 20px;
   position: relative;
   height: 100vh; 
-  background: url("../media/batalha-verdun.webp") center/cover no-repeat;
+  background: url("../media/frança.jpg ") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,4 +159,7 @@ h2 {
 }
 img{
   border-radius: 10px;
+}
+.carac{
+    color: white;
 }
