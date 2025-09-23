@@ -40,7 +40,7 @@ const questions = [
     hint: "O imperador que abdicou em 1918."
   },
   {
-    question: "Qual tecnologia naval foi decisiva na guerra?",
+    question: "Qual tecnologia foi decisiva na guerra?",
     options: ["Submarinos U-boat", "Porta-aviões", "Mísseis balísticos", "Tanques anfíbios"],
     correct: 0,
     hint: "Principalmente usados pela Alemanha."
