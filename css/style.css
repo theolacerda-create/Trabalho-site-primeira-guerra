@@ -16,13 +16,14 @@ html, body {
   font-weight: 400;
   color: var(--c1);
   scroll-behavior: smooth;
+  background: linear-gradient(180deg, #292727 0%, #3a2a2a 40%, #BFBFBF 100%);
+  transition: background 0.6s;
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
-
 
 img {
   max-width: 100%;
@@ -41,7 +42,7 @@ img {
   z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start; 
 }
 
 .menu {
@@ -71,15 +72,19 @@ img {
   color: var(--c1);
   cursor: pointer;
   display: none;
+  margin-right: 1rem;
 }
 
 .hero {
   position: relative;
   height: 100vh;
-  background: url('../media/home/home.png');
+  background: 
+    linear-gradient(to bottom, rgba(41,39,39,0) 70%, rgba(41,39,39,0.95) 100%),
+    url('../media/home/home.png');
   background-position: center bottom;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-color: var(--c4);
   display: grid;  
   place-items: center;
   text-align: center;
@@ -107,23 +112,30 @@ section {
 }
 
 @media (max-width: 768px) {
+  .nav {
+    justify-content: flex-start; 
+  }
   .menu {
     display: none;
     flex-direction: column;
     background: rgba(23,23,23,0.95);
     position: absolute;
     top: 60px;
-    right: 10px;
+    left: 10px; 
+    right: auto;
     padding: 1rem;
     border-radius: 8px;
   }
-
   .menu.active {
     display: flex;
   }
-
   .menu-toggle {
     display: block;
+    margin-right: 0.5rem;
+  }
+
+  .hero {
+    background-size: cover;
   }
 }
 

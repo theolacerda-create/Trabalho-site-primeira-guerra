@@ -197,8 +197,12 @@ function restartQuiz() {
   score = 0;
   selectedAnswer = -1;
   answered = false;
-  document.querySelector('.question-container').style.display = 'block';
-  document.querySelector('.control-buttons').style.display = 'flex';
+  const questionContainer = document.querySelector('.question-container');
+  const controlButtons = document.querySelector('.control-buttons');
+  questionContainer.style.display = 'block';
+  questionContainer.style.opacity = '1';
+  controlButtons.style.display = 'flex';
+  controlButtons.style.opacity = '1';
   elements.resultContainer.style.display = 'none';
   loadQuestion();
 }
