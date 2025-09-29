@@ -93,4 +93,8 @@ e Abra o index.html para vizualizar o site no navegador padrão
 <img src="media/git/extract.png" height= "360"/>
 
 
+<<<<<<< Updated upstream
 ### Creditos
+=======
+### Creditos
+>>>>>>> Stashed changes
