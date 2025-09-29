@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Causas</title>
+  <link rel="stylesheet" href="../css/Causas.css">
+</head>
+<body>
+<nav class="nav">
+    <div class="container">
+      <div class="menu" id="menu">
+        <a href="../index.html">Início</a>
+        <a href="../html/Consequencias.html">Consequências</a>
+        <a href="../html/Figuras.html">Figuras importantes</a>
+        <a href="../html/Filmes.html">Filmes/Livros</a>
+        <a href="../html/quiz.html">Quiz</a>
+      </div>
+    </div>
+  </nav>
+<div class="fullscreen" id="mapa"></div>
+
+<script>
+let svgPB, svgColorido;
+
+const coresAliancas = {
+  triplice_entente: "#1E90FF",
+  triplice_alianca: "#FF4500"
+};
+
+const triplice_entente_ids = [
+  "franca",
+  "reino_unido",
+  "reino_unido_ilha1",
+  "russia",
+  "russia_extremo_oriente"
+];
+
+const triplice_alianca_ids = [
+  "alemanha",
+  "alemanha_fragmento1",
+  "austria_hungria",
+  "austria_hungria_fragmento1",
+  "italia"
+];
+
+fetch("../media/SVG(1)/Mapa.svg")
+  .then(res => res.text())
+  .then(svgText => {
+    const parser = new DOMParser();
+    const svgDoc = parser.parseFromString(svgText, "image/svg+xml");
+    svgPB = svgDoc.documentElement;
+
+    svgPB.querySelectorAll("path, g").forEach(el => el.style.pointerEvents = "all");
+
+    document.getElementById("mapa").appendChild(svgPB);
+
+    carregarColorido();
+  });
+
+function carregarColorido() {
+  fetch("../media/SVG(1)/Mapa-colorido.svg")
+    .then(res => res.text())
+    .then(svgText => {
+      const parser = new DOMParser();
+      const svgDoc = parser.parseFromString(svgText, "image/svg+xml");
+      svgColorido = svgDoc.documentElement;
+
+      aplicarHoverAlianças();
+    });
+}
+
+function aplicarHoverAlianças() {
+  const elements = svgPB.querySelectorAll("path, g");
+
+  elements.forEach(el => {
+    let ativado = false;
+
+    el.addEventListener("mouseenter", () => {
+      if (ativado) return;
+      ativado = true;
+
+      const id = el.id;
+      let cor = "gray";
+
+      if (id) {
+        if (triplice_entente_ids.includes(id)) {
+          cor = coresAliancas.triplice_entente;
+        } else if (triplice_alianca_ids.includes(id)) {
+          cor = coresAliancas.triplice_alianca;
+        } else if (svgColorido) {
+          const colorEl = svgColorido.querySelector("#" + id);
+          if (colorEl) cor = colorEl.style.fill || colorEl.getAttribute("fill") || cor;
+        }
+      }
+
+      el.style.fill = cor;
+    });
+  });
+}
+</script>
+</body>
+</html>
