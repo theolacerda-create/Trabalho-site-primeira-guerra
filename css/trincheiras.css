@@ -47,7 +47,7 @@ body {
 header {
   position: relative;
   height: 100vh; 
-  background: url("../media/1917tri.webp") center/cover no-repeat;
+  background: url("../media/guerradastrincheiras.png") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,7 +61,7 @@ header .overlay {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.2);
   z-index: 1;
 }
 
