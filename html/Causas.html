@@ -26,7 +26,8 @@
 
     const coresAliancas = {
       triplice_entente: "#1E90FF",   
-      triplice_alianca: "#FF4500"    
+      triplice_alianca: "#FF4500",
+      polonia: "purple"   
     };
 
     
@@ -42,11 +43,15 @@
 
     
     const triplice_alianca_ids = [
-      "alemanha",
+      "Alemanha_c",       
       "austria_hungria",
       "italia",
-      "Estado_Alemanha",
-        
+      "Estado_Alemanha"
+    ];
+
+    
+    const polonia_ids = [
+      "pl"   
     ];
 
     fetch("../media/SVG(1)/Mapa.svg")
@@ -85,19 +90,18 @@
           ativado = true;
 
           const id = el.id || "";
-          let cor = "gray";
+          let cor = "darkblue";
 
           if (triplice_entente_ids.includes(id)) {
             cor = coresAliancas.triplice_entente;
           } else if (triplice_alianca_ids.includes(id)) {
             cor = coresAliancas.triplice_alianca;
+          } else if (polonia_ids.includes(id)) {
+            cor = coresAliancas.polonia;
           } else {
             let colorEl = svgColorido.querySelector("#" + id);
             if (colorEl) {
               cor = colorEl.style.fill || colorEl.getAttribute("fill") || cor;
-            } else {
-              const rect = el.getBoundingClientRect();
-              cor = (rect.top < window.innerHeight / 2) ? "darkblue" : "darkred";
             }
           }
 
