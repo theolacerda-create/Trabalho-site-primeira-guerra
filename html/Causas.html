@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Causas</title>
   <link rel="stylesheet" href="../css/Causas.css">
+  
 </head>
 <body>
   <nav class="nav">
@@ -19,40 +20,49 @@
     </div>
   </nav>
 
-  <div class="fullscreen" id="mapa"></div>
+  <div class="fullscreen" id="mapa">
+    <div class="legenda">
+      <h3>Legenda:</h3>
+      <ul>
+        <li><span class="cor entente"></span> Tríplice Entente</li>
+        <li><span class="cor aliados"></span> Paises Divididos</li>
+        <li><span class="cor triplice"></span> Tríplice Aliança</li>
+        <li><span class="cor neutros"></span> Neutros</li>
+      </ul>
+    </div>
+  </div>
 
   <script>
     let svgPB, svgColorido;
 
     const coresAliancas = {
-      triplice_entente: "#1E90FF",   
+      triplice_entente: "#1E90FF",
       triplice_alianca: "#FF4500",
-      polonia: "purple"   
+      polonia: "purple",
+      romenia: "purple",
+      turquia: "darkblue"
     };
 
-    
     const triplice_entente_ids = [
       "franca",
       "reino_unido",
-      "ilha_Reino_Unido",   
+      "ilha_Reino_Unido",
       "russia",
       "russia_extremo_oriente",
       "belgica",
       "holanda"
     ];
 
-    
     const triplice_alianca_ids = [
-      "Alemanha_c",       
+      "Alemanha_c",
       "austria_hungria",
       "italia",
       "Estado_Alemanha"
     ];
 
-    
-    const polonia_ids = [
-      "pl"   
-    ];
+    const polonia_ids = ["pl"];
+    const romenia_ids = ["ro"];
+    const turquia_ids = ["tm"];
 
     fetch("../media/SVG(1)/Mapa.svg")
       .then(res => res.text())
@@ -74,7 +84,6 @@
           const parser = new DOMParser();
           const svgDoc = parser.parseFromString(svgText, "image/svg+xml");
           svgColorido = svgDoc.documentElement;
-
           aplicarHoverAlianças();
         });
     }
@@ -98,6 +107,10 @@
             cor = coresAliancas.triplice_alianca;
           } else if (polonia_ids.includes(id)) {
             cor = coresAliancas.polonia;
+          } else if (romenia_ids.includes(id)) {
+            cor = coresAliancas.romenia;
+          } else if (turquia_ids.includes(id)) {
+            cor = coresAliancas.turquia;
           } else {
             let colorEl = svgColorido.querySelector("#" + id);
             if (colorEl) {
