@@ -4,32 +4,139 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Causas</title>
-  <link rel="stylesheet" href="../css/Causas.css">
-  
+  <style>
+    body {
+      overflow: hidden;
+      margin: 0;
+      font-family: "EB Garamond", serif;
+      background: #252424;
+      color: #fff;
+    }
+
+    .nav {
+      background: rgba(23, 23, 23, 0.6);
+      padding: 0.5rem 1rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+    }
+
+    .menu {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 0.55rem 0.8rem;
+      border-radius: 12px;
+      color: #fff;
+      opacity: 0.9;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .menu a:hover {
+      color: #d60000;
+      opacity: 1;
+    }
+
+    #mapa {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      margin-top: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .legenda {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: rgba(23, 23, 23, 0.85);
+      padding: 10px 15px;
+      border-radius: 8px;
+      color: white;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    }
+
+    .cor {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      border: 1px solid white;
+      border-radius: 3px;
+    }
+
+    .cor.entente { background-color: rgb(1, 1, 168); }
+    .cor.triplice { background-color: red; }
+    .cor.neutros { background-color: gray; }
+    .cor.aliados { background-color: purple; }
+
+    .card-info {
+      position: absolute;
+     
+      bottom: 130px;
+      left: 20px;
+      width: 280px;
+      background: rgba(50, 50, 50, 0.95);
+      padding: 15px;
+      border-radius: 12px;
+      color: white;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.7);
+      font-family: Arial, sans-serif;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .card-info:hover {
+      transform: scale(1.05);
+      background: rgba(50, 50, 50, 1);
+    }
+
+  </style>
 </head>
 <body>
+
   <nav class="nav">
-    <div class="container">
-      <div class="menu" id="menu">
-        <a href="../index.html">Início</a>
-        <a href="../html/Consequencias.html">Consequências</a>
-        <a href="../html/Figuras.html">Figuras importantes</a>
-        <a href="../html/Filmes.html">Filmes/Livros</a>
-        <a href="../html/quiz.html">Quiz</a>
-      </div>
+    <div class="menu">
+      <a href="../index.html">Início</a>
+      <a href="../html/Consequencias.html">Consequências</a>
+      <a href="../html/Figuras.html">Figuras importantes</a>
+      <a href="../html/Filmes.html">Filmes/Livros</a>
+      <a href="../html/quiz.html">Quiz</a>
     </div>
   </nav>
 
   <div class="fullscreen" id="mapa">
+
+    <div class="card-info">
+      <h3>Causas</h3>
+      <!--<p>A Primeira Guerra Mundial (1914-1918) foi o resultado de uma complexa teia de rivalidades e tensões que se acumularam na Europa desde o final do século XIX. As principais causas do conflito são:</p>-->
+       <h3> Imperialismo e  Rivalidade</h3>
+      <!--<p>A Alemanha, que se unificou tardiamente e se industrializou rapidamente, sentia-se prejudicada na partilha colonial e desafiava o poderio econômico e naval do Reino Unido e da França, gerando atritos constantes.</p>-->
+      <h3>  Nacionalismo Exacerbado</h3>
+      <h3>A Política de Alianças</h3>
+      <h3>Paz Armada</h3>
+    </div>
+    </div>
+   
+
     <div class="legenda">
       <h3>Legenda:</h3>
       <ul>
         <li><span class="cor entente"></span> Tríplice Entente</li>
-        <li><span class="cor aliados"></span> Paises Divididos</li>
+        <li><span class="cor aliados"></span> Países Divididos</li>
         <li><span class="cor triplice"></span> Tríplice Aliança</li>
         <li><span class="cor neutros"></span> Neutros</li>
       </ul>
     </div>
+
   </div>
 
   <script>
@@ -43,23 +150,8 @@
       turquia: "darkblue"
     };
 
-    const triplice_entente_ids = [
-      "franca",
-      "reino_unido",
-      "ilha_Reino_Unido",
-      "russia",
-      "russia_extremo_oriente",
-      "belgica",
-      "holanda"
-    ];
-
-    const triplice_alianca_ids = [
-      "Alemanha_c",
-      "austria_hungria",
-      "italia",
-      "Estado_Alemanha"
-    ];
-
+    const triplice_entente_ids = ["franca", "reino_unido", "ilha_Reino_Unido", "russia", "belgica"];
+    const triplice_alianca_ids = ["Alemanha_c", "austria_hungria", "italia"];
     const polonia_ids = ["pl"];
     const romenia_ids = ["ro"];
     const turquia_ids = ["tm"];
@@ -123,5 +215,6 @@
       });
     }
   </script>
+
 </body>
 </html>

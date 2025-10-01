@@ -1,5 +1,5 @@
-  body {
-    overflow: hidden;
+   body {
+      overflow: hidden;
       margin: 0;
       font-family: "EB Garamond", serif;
       background: #252424;
@@ -86,3 +86,35 @@
     .cor.triplice { background-color: red; }
     .cor.neutros { background-color: gray; }
     .cor.aliados { background-color: rgb(114, 1, 114); }
+
+    /* CARD ACIMA DA LEGENDA */
+    .card-info {
+      position: absolute;
+      bottom: 100px; /* altura acima da legenda */
+      left: 20px;
+      width: 280px;
+      background: rgba(23, 23, 23, 0.85);
+      padding: 15px;
+      border-radius: 12px;
+      color: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+      font-family: Arial, sans-serif;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .card-info:hover {
+      transform: scale(1.05);
+      background: rgba(23, 23, 23, 1);
+    }
+
+    .card-info h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .card-info p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.4;
+    }
