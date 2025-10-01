@@ -5,13 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Causas</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
     body {
       overflow: hidden;
       margin: 0;
       font-family: "EB Garamond", serif;
+      font-optical-sizing: auto;
       background: #252424;
       color: #fff;
     }
+
 
     .nav {
       background: rgba(23, 23, 23, 0.6);
@@ -44,6 +47,7 @@
       opacity: 1;
     }
 
+ 
     #mapa {
       position: relative;
       width: 100%;
@@ -54,9 +58,10 @@
       align-items: center;
     }
 
+    
     .legenda {
       position: absolute;
-      bottom: 0;
+      bottom: 60px;
       left: 0;
       background: rgba(23, 23, 23, 0.85);
       padding: 10px 15px;
@@ -79,12 +84,12 @@
     .cor.neutros { background-color: gray; }
     .cor.aliados { background-color: purple; }
 
+   
     .card-info {
       position: absolute;
-     
-      bottom: 130px;
+      bottom: 270px;
       left: 20px;
-      width: 280px;
+      width: 300px;
       background: rgba(50, 50, 50, 0.95);
       padding: 15px;
       border-radius: 12px;
@@ -99,10 +104,49 @@
       background: rgba(50, 50, 50, 1);
     }
 
+    .card-info h3 {
+      margin: 10px 0;
+      font-size: 18px;
+      color: rgb(160, 0, 0);
+    }
+
+ 
+    .accordion {
+      border-top: 1px solid #444;
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid #444;
+    }
+
+    .accordion-header {
+      padding: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .accordion-header:hover { background: rgba(255, 255, 255, 0.1); }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+      padding: 0 10px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .accordion-content.open {
+      max-height: 200px;
+      padding: 10px;
+    }
   </style>
 </head>
 <body>
 
+ 
   <nav class="nav">
     <div class="menu">
       <a href="../index.html">Início</a>
@@ -113,20 +157,39 @@
     </div>
   </nav>
 
-  <div class="fullscreen" id="mapa">
+  <div id="mapa">
 
     <div class="card-info">
-      <h3>Causas</h3>
-      <!--<p>A Primeira Guerra Mundial (1914-1918) foi o resultado de uma complexa teia de rivalidades e tensões que se acumularam na Europa desde o final do século XIX. As principais causas do conflito são:</p>-->
-       <h3> Imperialismo e  Rivalidade</h3>
-      <!--<p>A Alemanha, que se unificou tardiamente e se industrializou rapidamente, sentia-se prejudicada na partilha colonial e desafiava o poderio econômico e naval do Reino Unido e da França, gerando atritos constantes.</p>-->
-      <h3>  Nacionalismo Exacerbado</h3>
-      <h3>A Política de Alianças</h3>
-      <h3>Paz Armada</h3>
+      <h3>Causas:</h3>
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-header">Imperialismo e Rivalidade</div>
+          <div class="accordion-content">
+            A disputa por colônias e mercados aumentou as tensões entre as potências europeias.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">Nacionalismo Exacerbado</div>
+          <div class="accordion-content">
+            O forte nacionalismo gerava rivalidades internas e externas, incentivando conflitos.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">A Política de Alianças</div>
+          <div class="accordion-content">
+            A divisão entre Tríplice Entente e Tríplice Aliança criou um clima de desconfiança e competição militar.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">Paises Divididos</div>
+          <div class="accordion-content">
+            O período anterior à guerra foi marcado por corridas armamentistas e preparação bélica, sem diálogo diplomático efetivo.
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
-   
 
+   
     <div class="legenda">
       <h3>Legenda:</h3>
       <ul>
@@ -136,10 +199,24 @@
         <li><span class="cor neutros"></span> Neutros</li>
       </ul>
     </div>
-
   </div>
 
+  
   <script>
+   
+    const headers = document.querySelectorAll(".accordion-header");
+    headers.forEach(header => {
+      header.addEventListener("click", () => {
+        const content = header.nextElementSibling;
+        const isOpen = content.classList.contains("open");
+
+        document.querySelectorAll(".accordion-content").forEach(c => c.classList.remove("open"));
+
+        if (!isOpen) content.classList.add("open");
+      });
+    });
+
+  
     let svgPB, svgColorido;
 
     const coresAliancas = {
