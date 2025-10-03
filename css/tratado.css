@@ -1,0 +1,45 @@
+:root {
+  --c1: #3e3e3e; 
+  --c2: #2e74f7;
+  --c3: #d4d4d4;
+  --c4: #1e1e1e; 
+  --cd: #d60000;
+}
+
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: var(--c4);
+  color: var(--c3);
+  line-height: 1.6;
+}
+
+.menu a {
+  font-family: sans-serif;
+}
+
+.nav {
+  background: rgba(23,23,23,0.6);
+  backdrop-filter: blur(6px);
+  padding: 1.2rem 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.nav a:hover {
+  color: var(--cd);
+}
